@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 export default function AgePage() {
 
-  const [age, setAge] = useState ("");
+  const [age, setAge] = useState ("a");
   function handleOnChange(e) {
-    console.log(e.target.value)
+    setAge(e.target.value)
   }
 
   return (
@@ -18,6 +18,7 @@ export default function AgePage() {
           id="a" 
           value="a" 
           onChange={handleOnChange}
+          defaultChecked={age === "a"}
         />
         <label className="form-check-label" htmlFor="a">
           Younger 25
@@ -32,6 +33,7 @@ export default function AgePage() {
           id="b" 
           value="b" 
           onChange={handleOnChange}
+          defaultChecked={age === "b"}
         />
         <label className="form-check-label" htmlFor="b">
           Between 25 and 50
@@ -46,6 +48,7 @@ export default function AgePage() {
           id="c" 
           value="c" 
           onChange={handleOnChange}
+          defaultChecked={age === "c"}
         />
         <label className="form-check-label" htmlFor="c">
           Older than 50
