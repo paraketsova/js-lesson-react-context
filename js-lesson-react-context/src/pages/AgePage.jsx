@@ -9,24 +9,25 @@ export default function AgePage() {
     setAge(e.target.value)
   }
 
+  const pageName = "age";
+  const currentValue = age;
+
+  const pageData = [
+    {value: "a", label: "Younger than 25 🐣"},
+    {value: "b", label: "Between 25 and 50"},
+    {value: "c", label: "Older than 50"},
+  ]
+
   return (
     <div>
       <h2>Age</h2>
 
-      <RadioButton
-        name="age" value="a" onChange={handleOnChange} currentValue={age}
-        label="Younger than 25 🐣"
-      />
-
-      <RadioButton
-        name="age" value="b" onChange={handleOnChange} currentValue={age}
-        label="Between 25 and 50"
-      />
-
-      <RadioButton
-        name="age" value="c" onChange={handleOnChange} currentValue={age}
-        label="Older than 50"
-      />
+      {pageData.map((item, index) => {
+        return <RadioButton key={index}
+          name={pageName} value={item.value} onChange={handleOnChange} currentValue={currentValue}
+          label={item.label}
+        />
+      })}
 
     </div>
   )
