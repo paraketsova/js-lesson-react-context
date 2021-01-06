@@ -30,7 +30,7 @@ export default function AgePage() {
         />
       })}
 
-      <Link to="/interest" className="btn btn-secondary btn-block">
+      <Link to="/interest" className={`btn btn-secondary btn-block ${currentValue === "" && "disabled"}`}>
         Move along to interest page
       </Link>
 
