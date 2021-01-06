@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 
 export default function AgePage() {
 
-  const [age, setAge] = useState ("")
+  const [age, setAge] = useState ("");
+  function handleOnChange(e) {
+    console.log(e)
+  }
 
   return (
     <div>
@@ -14,6 +17,7 @@ export default function AgePage() {
           name="age" 
           id="a" 
           value="a" 
+          onChange={handleOnChange}
         />
         <label className="form-check-label" htmlFor="exampleRadios1">
           Younger 25
@@ -27,6 +31,7 @@ export default function AgePage() {
           name="age" 
           id="b" 
           value="b" 
+          onChange={handleOnChange}
         />
         <label className="form-check-label" htmlFor="exampleRadios1">
           Between 25 and 50
@@ -40,6 +45,7 @@ export default function AgePage() {
           name="age" 
           id="c" 
           value="c" 
+          onChange={handleOnChange}
         />
         <label className="form-check-label" htmlFor="exampleRadios1">
           Older than 50
