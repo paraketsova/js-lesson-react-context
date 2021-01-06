@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import RadioButton from '../components/RadioButton'
+import ButtonNext from '../components/ButtonNext'
 
 export default function AgePage() {
 
@@ -30,9 +31,11 @@ export default function AgePage() {
         />
       })}
 
-      <Link to="/interest" className={`btn btn-secondary btn-block ${currentValue === "" && "disabled"}`}>
-        Move along to interest page
-      </Link>
+      <ButtonNext 
+        to="/interest"
+        currentValue={currentValue}
+        label="Move along to interest page"
+      />
 
     </div>
   )
