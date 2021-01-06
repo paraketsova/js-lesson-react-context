@@ -2,12 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function ButonNext({to, currentValue, label}) {
+  function isValidated() {
+    return currentValue!==""
+  }
   return (
     <Link 
       to={to} 
-      className={`btn btn-secondary btn-block ${currentValue === "" && "disabled"}`}
+      className={`btn btn-secondary btn-block ${!isValidated() && "disabled"}`}
     >
-      {label}
+      {isValidated()
+      ?
+        label
+      :
+       "Please pick a choice"
+      }
+      
     </Link>
   )
 }
