@@ -19,7 +19,7 @@ export default function AgePage() {
           value="a" 
           onChange={handleOnChange}
         />
-        <label className="form-check-label" htmlFor="exampleRadios1">
+        <label className="form-check-label" htmlFor="a">
           Younger 25
         </label>
       </div> 
@@ -33,7 +33,7 @@ export default function AgePage() {
           value="b" 
           onChange={handleOnChange}
         />
-        <label className="form-check-label" htmlFor="exampleRadios1">
+        <label className="form-check-label" htmlFor="b">
           Between 25 and 50
         </label>
       </div>  
@@ -47,7 +47,7 @@ export default function AgePage() {
           value="c" 
           onChange={handleOnChange}
         />
-        <label className="form-check-label" htmlFor="exampleRadios1">
+        <label className="form-check-label" htmlFor="c">
           Older than 50
         </label>
       </div>         
