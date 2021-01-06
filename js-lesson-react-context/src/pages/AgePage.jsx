@@ -4,7 +4,7 @@ export default function AgePage() {
 
   const [age, setAge] = useState ("");
   function handleOnChange(e) {
-    console.log(e)
+    console.log(e.target.value)
   }
 
   return (
