@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import AgePage from './pages/AgePage'
+import InterestPage from './pages/InterestPage';
 
 
 
@@ -17,6 +18,9 @@ function App() {
 
       <div className="col-md-12">
         <Switch>
+          <Route path="/interest">
+            <InterestPage />
+          </Route>
           <Route path="/age">
             <AgePage />
           </Route>
