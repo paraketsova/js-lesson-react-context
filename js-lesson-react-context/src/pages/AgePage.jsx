@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import RadioButton from '../components/RadioButton'
 
 export default function AgePage() {
@@ -28,6 +29,10 @@ export default function AgePage() {
           label={item.label}
         />
       })}
+
+      <Link to="/interest" className="btn btn-secondary btn-block">
+        Move along to interest page
+      </Link>
 
     </div>
   )
