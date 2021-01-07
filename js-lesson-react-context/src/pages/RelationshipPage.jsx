@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import ButtonNext from '../components/ButtonNext'
 import RadioButton from '../components/RadioButton'
+import { UserInputContext } from '../contexts/UserInputContex';
 
 export default function RelationshipPage() {
-  const [relationship, setRelationship] = useState ("");
+  const {relationship, setRelationship} = useContext(UserInputContext);
 
   function handleOnChange(e) {
     setRelationship(e.target.value)

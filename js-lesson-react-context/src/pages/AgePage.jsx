@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import RadioButton from '../components/RadioButton'
 import ButtonNext from '../components/ButtonNext'
+import { UserInputContext } from '../contexts/UserInputContex';
 
 export default function AgePage() {
 
-  const [age, setAge] = useState ("");
+  const {age, setAge} = useContext(UserInputContext);
 
   function handleOnChange(e) {
     setAge(e.target.value)
