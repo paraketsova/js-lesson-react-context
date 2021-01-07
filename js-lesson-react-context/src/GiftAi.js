@@ -30,13 +30,13 @@ const giftDict = {
   "abc": "RC Car",
   "bbc": "Smart Home Sockets",
   "cbc": "Wifi Lamps",
-  
+
   "acc": "Get started with Molding Kit",
   "bcc": "Sewing Kit",
   "ccc": "A bag of cement"
 }
-export const GiftAI = {
-  calculate: (code) => {
+export const GiftAI = { // принимает значение кода из резалтПейдж и выдаёт соответствующий подарок.
+  calculate: (code) => { // имя калькулейт - не специально, может быть любым
     return giftDict[code]
   }
 }
