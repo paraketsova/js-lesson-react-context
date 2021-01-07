@@ -4,9 +4,7 @@ import HomePage from './pages/HomePage'
 import AgePage from './pages/AgePage'
 import InterestPage from './pages/InterestPage';
 import RelationshipPage from './pages/RelationshipPage';
-
-
-
+import ResultPage from './pages/ResultPage';
 
 function App() {
   return (
@@ -19,7 +17,10 @@ function App() {
 
       <div className="col-md-12">
         <Switch>
-        <Route path="/relationship">
+          <Route path="/result">
+            <ResultPage />
+          </Route>
+          <Route path="/relationship">
             <RelationshipPage />
           </Route>
           <Route path="/interest">
