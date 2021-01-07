@@ -9,12 +9,12 @@ import { UserInputContext } from './contexts/UserInputContex';
 
 function App() {
   const [age, setAge] = useState("");
-  const [interest, setInterst] = useState("");
+  const [interest, setInterest] = useState("");
   const [relationship, setRelationship] = useState("");
 
   const userInputContextValue = {
     age,setAge,
-    interest, setInterst,
+    interest, setInterest,
     relationship, setRelationship
   }
 
@@ -27,7 +27,7 @@ function App() {
       </div>
 
       <div className="col-md-12">
-        <UserInputContext.Provider value={userInputContextValue}>
+        <UserInputContext.Provider value={{age,setAge, interest, setInterest, relationship, setRelationship}}>
           <Switch>
             <Route path="/result">
               <ResultPage />

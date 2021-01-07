@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import RadioButton from '../components/RadioButton'
 import ButtonNext from '../components/ButtonNext'
+import RadioButton from '../components/RadioButton'
 import { UserInputContext } from '../contexts/UserInputContex';
 
 
 export default function InterestPage() {
-
-  const {interest, setInterest} = useContext(UserInputContext);
+  const {interest, setInterest} = useContext(UserInputContext)
 
   function handleOnChange(e) {
     setInterest(e.target.value)
