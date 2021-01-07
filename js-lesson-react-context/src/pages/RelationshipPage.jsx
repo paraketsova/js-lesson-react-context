@@ -1,29 +1,26 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import RadioButton from '../components/RadioButton'
 import ButtonNext from '../components/ButtonNext'
+import RadioButton from '../components/RadioButton'
 
-
-export default function InterestPage() {
-
-  const [interest, setInterest] = useState ("");
+export default function RelationshipPage() {
+  const [relationship, setRelationship] = useState ("");
 
   function handleOnChange(e) {
-    setInterest(e.target.value)
+    setRelationship(e.target.value)
   }
 
-  const pageName = "interest";
-  const currentValue = interest;
+  const pageName = "relationship";
+  const currentValue = relationship;
 
   const pageData = [
-    {value: "a", label: "Fashion"},
-    {value: "b", label: "Tech"},
-    {value: "c", label: "Craft"},
+    {value: "a", label: "Parent"},
+    {value: "b", label: "Sibling"},
+    {value: "c", label: "Other"},
   ]
 
   return (
     <div>
-      <h2>Interest</h2>
+      <h2>Relationship</h2>
 
       {pageData.map((item, index) => {
         return <RadioButton key={index}
@@ -33,9 +30,9 @@ export default function InterestPage() {
       })}
 
       <ButtonNext 
-        to="/relationship"
+        to="/result"
         currentValue={currentValue}
-        label="Lets move to your relationship"
+        label="Lets see your result"
       />
 
     </div>

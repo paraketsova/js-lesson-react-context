@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import AgePage from './pages/AgePage'
 import InterestPage from './pages/InterestPage';
+import RelationshipPage from './pages/RelationshipPage';
 
 
 
@@ -18,6 +19,9 @@ function App() {
 
       <div className="col-md-12">
         <Switch>
+        <Route path="/relationship">
+            <RelationshipPage />
+          </Route>
           <Route path="/interest">
             <InterestPage />
           </Route>
