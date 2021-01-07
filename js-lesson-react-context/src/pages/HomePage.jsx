@@ -9,7 +9,7 @@ export default function HomePage() {
       <img src = {imageSrc} className="img-fluid" />
       <h2>Welcome to Holiday Gift Generator.</h2>
       <p>In the spirit of holidays,
-        we woukd like to help you find a gift for your loved ones.
+        we would like to help you find a gift for your loved ones.
       </p>
       <p>
         You will be able to choose age, interest and relationship 
