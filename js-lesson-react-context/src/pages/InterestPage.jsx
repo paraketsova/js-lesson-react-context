@@ -1,42 +1,19 @@
-import React, { useContext } from 'react'
-import ButtonNext from '../components/ButtonNext'
-import RadioButton from '../components/RadioButton'
-import { UserInputContext } from '../contexts/UserInputContex';
-
+import React, {useContext} from 'react'
+import PageGenerator from '../components/PageGenerator'
+import { UserInputContext } from '../contexts/UserInputContext'
+import { CMSKit } from '../data/CMSKit'
 
 export default function InterestPage() {
   const {interest, setInterest} = useContext(UserInputContext)
-
-  function handleOnChange(e) {
-    setInterest(e.target.value)
-  }
-
-  const pageName = "interest";
-  const currentValue = interest;
-
-  const pageData = [
-    {value: "a", label: "Fashion"},
-    {value: "b", label: "Tech"},
-    {value: "c", label: "Craft"},
-  ]
-
+  const data = CMSKit.interest
+  
   return (
     <div>
-      <h2>Interest</h2>
-
-      {pageData.map((item, index) => {
-        return <RadioButton key={index}
-          name={pageName} value={item.value} onChange={handleOnChange} currentValue={currentValue}
-          label={item.label}
-        />
-      })}
-
-      <ButtonNext 
-        to="/relationship"
-        currentValue={currentValue}
-        label="Lets move to your relationship"
+      <PageGenerator 
+        data={data}
+        stateGetter={interest}
+        stateSetter={setInterest}
       />
-
     </div>
   )
 }

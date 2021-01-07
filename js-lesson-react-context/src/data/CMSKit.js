@@ -1,5 +1,5 @@
-const pageData = {
-  age:{
+export const CMSKit = {
+  age: {
     name: "age",
     heading: "Age",
     button: {
@@ -12,32 +12,30 @@ const pageData = {
       {value: "c", label: "Older than 50"},
     ]
   },
-
   interest: {
-    name: "interest",
-    heading: "Interest",
-    button: {
-      label: "Lets move on to your relationship",
-      to: "/relationship"
-    },
-    alternatives: [
-     {value: "a", label: "Fashion"},
-     {value: "b", label: "Tech"},
-     {value: "c", label: "Craft"},
+   name: "interest",
+   heading: "Interest",
+   button: {
+     label: "Lets move on to your relationship",
+     to: "/relationship"
+   },
+   alternatives: [
+    {value: "a", label: "Fashion"},
+    {value: "b", label: "Tech"},
+    {value: "c", label: "Craft"},
+  ]
+ },
+ relationship: {
+   name: "relationship",
+   heading: "Relationship",
+   button: {
+     label: "Lets see your result",
+     to: "/result"
+   },
+   alternatives: [
+    {value: "a", label: "Parent"},
+    {value: "b", label: "Sibling"},
+    {value: "c", label: "Other"},
    ]
-  },
-  
-  relationship: {
-    name: "relationship",
-    heading: "Relationship",
-    button: {
-      label: "Lets see your result",
-      to: "/result"
-    },
-    alternatives: [
-     {value: "a", label: "Parent"},
-     {value: "b", label: "Sibling"},
-     {value: "c", label: "Other"},
-    ]
-  } 
- }
+ } 
+}
