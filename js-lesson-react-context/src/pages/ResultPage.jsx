@@ -9,10 +9,6 @@ export default function ResultPage() {
   return (
     <div>
       <h2>Result</h2>
-      <p>{age}</p>
-      <p>{interest}</p>
-      <p>{relationship}</p>
-      {code}
       <p>
         {GiftAI.calculate(code)}
       </p>
