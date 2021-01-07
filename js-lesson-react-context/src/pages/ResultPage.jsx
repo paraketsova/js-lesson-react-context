@@ -3,6 +3,7 @@ import { UserInputContext } from '../contexts/UserInputContex'
 
 export default function ResultPage() {
   const {age, interest, relationship} = useContext(UserInputContext);
+  const code = `${age}${interest}${relationship}`
 
   return (
     <div>
@@ -10,6 +11,7 @@ export default function ResultPage() {
       <p>{age}</p>
       <p>{interest}</p>
       <p>{relationship}</p>
+      {code}
       
     </div>
   )
